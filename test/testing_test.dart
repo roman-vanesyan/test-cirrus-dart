@@ -3,6 +3,6 @@ import 'package:test_cirrus/testing.dart';
 
 void main() {
   test('hello cirrus', () {
-    expect(greeting(), 'hello, cirrus!');
+    expect(greeting(), 'Hello, cirrus!');
   });
 }
