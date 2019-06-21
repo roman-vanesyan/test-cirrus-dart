@@ -4,7 +4,7 @@ container:
 task:
   pub_cache:
     folder: .packages
-    fingerprint_script: cat pubspec.lock
+    # fingerprint_script: cat pubspec.lock
     populate_script: pub get
 
   matrix:

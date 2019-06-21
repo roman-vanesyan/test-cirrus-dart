@@ -1,4 +1,4 @@
-import 'test.dart' as test;
+import 'testing_test.dart' as test;
 
 void main() {
   test.main();
