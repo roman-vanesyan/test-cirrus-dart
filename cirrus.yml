@@ -1,0 +1,14 @@
+container:
+  image: google/dart
+
+task:
+  pub_cache:
+    folder: .pub
+    fingerprint_script: cat pubspec.lock
+    populate_script: pub get
+
+  matrix:
+    - name: Test
+      container:
+        image: google/dart
+      test_script: pub run test
