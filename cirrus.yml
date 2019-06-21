@@ -3,7 +3,7 @@ container:
 
 task:
   pub_cache:
-    folder: .pub
+    folder: .packages
     fingerprint_script: cat pubspec.lock
     populate_script: pub get
 
