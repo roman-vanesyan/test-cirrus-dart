@@ -5,4 +5,8 @@ void main() {
   test('hello cirrus', () {
     expect(greeting(), 'Hello, cirrus!');
   });
+
+  test('h', () {
+    expect(true, isTrue);
+  });
 }
