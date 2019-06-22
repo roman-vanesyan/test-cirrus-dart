@@ -3,8 +3,8 @@ container:
 
 task:
   pub_cache:
-    folder: .packages
-    # fingerprint_script: cat pubspec.lock
+    folder: $HOME/.pub-cache
+    fingerprint_script: sha256sum pubspec.yaml
     populate_script: pub get
 
   matrix:
