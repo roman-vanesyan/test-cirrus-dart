@@ -7,8 +7,8 @@ task:
     fingerprint_script: sha256sum pubspec.yaml
     populate_script: pub get
 
-  resolve_dependecies:
-    get_script: pub get
+  resolve_deps_task:
+    resolve_deps_script: pub get
 
   matrix:
     - name: Test
