@@ -1,17 +1,21 @@
 container:
   image: google/dart
 
-task:
+cache_task:
   pub_cache:
     folder: $HOME/.pub-cache
     fingerprint_script: sha256sum pubspec.yaml
     populate_script: pub get
 
-  resolve_deps_task:
-    resolve_deps_script: pub get
+resolve_deps_task:
+  resolve_deps_script: pub get
+  depends_on: cache_task
 
+test_task:
   matrix:
     - name: Test
       container:
         image: google/dart
       test_script: pub run test
+  depends_on:
+    - resolve_deps_task
