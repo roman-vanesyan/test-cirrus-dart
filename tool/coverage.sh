@@ -16,6 +16,7 @@ dart --disable-service-auth-codes \
 pub global run coverage:collect_coverage \
     --port=$OBSERVATORY_PORT \
     --out=tmp/coverage.json \
+    --wait-paused \
     --resume-isolates
 
 echo "Generating LCOV report..."
