@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 OBSERVATORY_PORT=9999
 
 echo "Installing coverage package..."
