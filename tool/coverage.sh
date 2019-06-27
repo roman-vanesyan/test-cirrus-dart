@@ -8,15 +8,14 @@ pub global activate coverage
 
 echo "Collecting coverage data on port $OBSERVATORY_PORT..."
 
-nohup dart --disable-service-auth-codes \
+dart --disable-service-auth-codes \
     --enable-vm-service=$OBSERVATORY_PORT \
     --pause-isolates-on-exit \
-    test/all.dart
+    test/all.dart &
 
 pub global run coverage:collect_coverage \
-    --port=$OBS_PORT \
+    --port=$OBSERVATORY_PORT \
     --out=tmp/coverage.json \
-    --wait-paused \
     --resume-isolates
 
 echo "Generating LCOV report..."
